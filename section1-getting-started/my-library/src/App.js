@@ -1,7 +1,8 @@
 import logo from './logo.svg';
-import './App.css';
+import './styles.css';
 import { useState } from "react";
 import "./styles.css";
+import React  from 'react';
 
 
 const content = [
@@ -22,25 +23,47 @@ const content = [
     ]
   ];
 
-function App() {
+export default function App() {
+
+  const [activeContentIndex, setActiveContentIndex] = useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header> 
+        <div>
+          <h1>Arry Potter Library</h1>
+          <p>Welcome</p>
+        </div>
       </header>
+      <div id="tabs">
+        <menu>
+          <button
+            className={activeContentIndex === 0 ? "active" : ""}
+            onClick={() => setActiveContentIndex(0)}
+          >
+            Horor Book
+          </button>
+          <button
+            className={activeContentIndex === 1 ? "active" : ""}
+            onClick={() => setActiveContentIndex(1)}
+          >
+            Kids Book
+          </button>
+          <button
+            className={activeContentIndex === 2 ? "active" : ""}
+            onClick={() => setActiveContentIndex(2)}
+          >
+            Science Book
+          </button>
+        </menu>
+        <div id="tab-content">
+          <ul>
+            {content[activeContentIndex].map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
-
-export default App;
