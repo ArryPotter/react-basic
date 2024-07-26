@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Quicksand", sans-serif;
+  line-height: 1.5;
+  background-color: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  min-height: 80rem;
+}
+
+header {
+  text-align: center;
+  margin: 3rem 0;        
+}
+
+header img {
+  height: 5rem;
+  width: 10rem;
+  object-fit: scale-down;
+}
+
+header h1 {
+  margin: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 5rem;
+  color: #1A5319  
+}
+
+header p {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #1A5319;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+main {
+  width: 90%;
+  max-width: 50rem;
+  margin: auto;
+}
+
+#book-collection {
+  padding: 2rem;
+  border-radius: 6px;
+  background-color: #d6efd8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+main h2 {
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
+  margin: 0 0 1.5rem 0;
+  color: #a18aba;
+}
+
+#book-collection ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: #ebe7ef;
+  border-width: 2pt;
+}
+
+#book-collection li {
+  width: 10rem;
+  text-align: center;
+  border: 2px solid #1A5319;
+  border-radius: 10px;
+  padding: 3px;
+}
+
+#book-collection li p {
+  font-size: 0.9rem;
+}
+
+#book-item menu {
+  margin: 1rem 0;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+
+
